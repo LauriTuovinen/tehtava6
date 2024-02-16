@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 import React, {useEffect, useState } from "react";
 
 const api = {
@@ -37,11 +37,20 @@ fetch(url)
 
     return (
         <View>
-            <Text> {temp} &#8451; </Text>
+            <Text style={styles.heading}> {temp} &#8451; </Text>
             {icon &&
             <Image source={{uri: icon}} style={{width: 100, height: 100}} />
             }
-            <Text>{description}</Text>
+            <Text style={styles.heading}>{description}</Text>
         </View>    
     )
 }
+
+const styles = StyleSheet.create({
+    heading: {
+      color: 'magenta',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginBottom: '16'
+    }
+  });

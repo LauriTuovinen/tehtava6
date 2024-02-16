@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   heading: {
+    color: 'blue',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: '16'
